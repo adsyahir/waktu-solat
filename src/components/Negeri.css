@@ -1,0 +1,14 @@
+.dropdown
+{
+
+    width:100%;
+    max-width:500px;
+    background-color: #F6F3F2 !important;
+    margin-bottom:10px;
+}
+
+.flex
+{
+    display:flex;
+    justify-content:center;
+}

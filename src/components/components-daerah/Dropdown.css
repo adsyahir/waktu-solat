@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    justify-content: center;
+    margin-bottom: 0;
+    list-style: none;
+}
+.dropdown-1
+{
+
+    width:100%;
+    max-width:500px;
+    background-color: #F6F3F2 !important;
+    margin-bottom:10px;
+}
+
+.flex-1
+{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}

@@ -1,53 +1,79 @@
 import React, { useState } from "react";
-import Dropdown_johor from './components-daerah/Dropdown_johor';
-import Dropdown_kedah from "./components-daerah/Dropdown_kedah";
+import DropdownJohor from "./components-daerah/DropdownJohor";
+import DropdownKedah from "./components-daerah/DropdownKedah";
+import DropdownKelantan from "./components-daerah/DropdownKelantan";
+import DropdownMelaka from "./components-daerah/DropdownMelaka";
+import DropdownPahang from "./components-daerah/DropdownPahang";
+import DropdownPerak from "./components-daerah/DropdownPerak";
+import DropdownPinang from "./components-daerah/DropdownPinang";
+import DropdownSelangor from "./components-daerah/DropdownSelangor";
+import DropdownSembilan from "./components-daerah/DropdownSembilan";
+import DropdownWilayah from "./components-daerah/DropdownWilayah";
+import DropdownTerenganu from "./components-daerah/DropdownTerenganu";
+import DropdownSabah from "./components-daerah/DropdownSabah";
+import DropdownSarawak from "./components-daerah/DropdownSarawak";
+import Select from "react-select";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./Negeri.css";
 
-const Dropdown_negeri = () => {
 
-    const [negeri, setNegeri] = useState({
-        selected: null,
-        negeris: [
-          { negeri: "Johor", id: 0 },
-          { negeri: "Kedah", id: 1 },
-          { negeri: "Kelantan", id: 2 },
-          { negeri: "Melaka", id: 3 },
-          { negeri: "Negeri Sembilan", id: 4 },
-          { negeri: "Pahang", id: 5 },
-          { negeri: "Perak", id: 6 },
-          { negeri: "Pulau Pinang", id: 7 },
-          { negeri: "Sabah", id: 8 },
-          { negeri: "Sarawak", id: 9 },
-          { negeri: "Selangor", id: 10 },
-          { negeri: "Terengganu", id: 11 },
-          { negeri: "Wilayah Persekutuan", id: 12 },
-        ],
-      });
-      const [hide,setHide] = useState(false);
+const Dropdown_label = () => {
+  const options = [
+    { label: 'Johor', value:'asdasd' },
+    { label: 'Kedah', value: '1' },
+    { label: 'Kelantan', value:'2'},
+  ];
+  const [label, setLabel] = useState({
+    selected: null,
+    labels: [
+      { label: "Johor", value:'Johor'},
+      { label: "Kedah", value:"Kedah"},
+      { label: "Kelantan" , value:"Kelantan"},
+      { label: "Melaka", value:"Melaka"},
+      { label: "Negeri Sembilan" , value:"Negeri Sembilan"},
+      { label: "Pahang" , value:"Pahang" },
+      { label: "Perak" , value:"Perak"},
+      { label: "Pulau Pinang" , value:"Pulau Pinang" },
+      { label: "Sabah",  value:"Sabah"},
+      { label: "Sarawak", value:"Sarawak"},
+      { label: "Selangor", value:"Selangor"},
+      { label: "Terengganu", value:"Terengganu"},
+      { label: "Wilayah Persekutuan", value:"Wilayah Persekutuan"},
+    ],
+  });
+  const [show, setShow] = useState("Wilayah Persekutuan");
 
-    function handleChange(e)
-    {
-      setNegeri({ ...negeri, selected: e.target.value });      
-      for(let i=0; i < negeri.negeris.length; i++)
-      {
-        if(negeri.selected === negeri.negeris[i].negeri)
-        {
-          setHide(true)
-        }
-      }
-    }
-            
-    return ( 
-        <div className="Dropdown_daerah">
-        <h1>{negeri.selected}</h1>
-         <select name="dropdown-negeri" onChange={(e)=> handleChange(e)}>
-         {negeri.negeris.map((elements, index) => (
-            <option key={index} value={elements.negeri}>{elements.negeri}</option>
-          ))}
-          </select>
-          <Dropdown_johor  hidden={hide} />
-          <Dropdown_kedah  hidden={hide}/>
-        </div>
-     );
-}
- 
-export default Dropdown_negeri;
+  function handleChange(e) {
+    setShow(e.value);
+    console.log(e.value);
+  }
+
+  return (
+    <div className="container">
+    <div className="flex">
+      <Select className="dropdown"
+        options={label.labels}
+        isSearchable
+        onChange={handleChange}
+        defaultValue={label.labels[12]}
+      
+      />
+      </div>
+      {show === "Johor" && <DropdownJohor />}
+      {show === "Kedah" && <DropdownKedah />}
+      {show === "Kelantan" && <DropdownKelantan />}
+      {show === "Melaka" && <DropdownMelaka />}
+      {show === "label Sembilan" && <DropdownSembilan />}
+      {show === "Pahang" && <DropdownPahang />}
+      {show === "Perak" && <DropdownPerak />}
+      {show === "Pulau Pinang" && <DropdownPinang />}
+      {show === "Sabah" && <DropdownSabah />}
+      {show === "Sarawak" && <DropdownSarawak />}
+      {show === "Selangor" && <DropdownSelangor />}
+      {show === "Terengganu" && <DropdownTerenganu />}
+      {show === "Wilayah Persekutuan" && <DropdownWilayah />}
+    </div>
+  );
+};
+
+export default Dropdown_label;

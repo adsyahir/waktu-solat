@@ -1,0 +1,131 @@
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip1113 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  max-width: 200px;
+  width: 100%;
+  background: #F6F3F2;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.snip1113 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+figure.snip1113 img {
+  max-width: 65%;
+  margin: 40px auto;
+  display: block;
+  position: relative;
+  border: 3px solid #666666;
+  padding: 15px 15px 85px 15px;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+figure.snip1113 figcaption {
+  position: absolute;
+  height: 120px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  display: block;
+}
+
+figure.snip1113 h3 {
+  background-color: #F6F3F2;
+  color: #215732;
+  font-size: 1.0em;
+  width: 100%;
+  padding: 5px 12px;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+figure.snip1113 h3 span {
+  font-weight: 800;
+}
+
+figure.snip1113 h4 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  opacity: 0.6;
+  font-size: 1.1em;
+}
+
+figure.snip1113.blue img {
+  border-color: #215732;
+}
+
+figure.snip1113.blue h3,
+figure.snip1113.blue h4 {
+  color: #215732;
+}
+
+figure.snip1113.red img {
+  border-color: #215732;
+}
+
+figure.snip1113.red h3,
+figure.snip1113.red h4 {
+  color: #215732;
+}
+
+figure.snip1113.yellow img {
+  border-color: #215732;
+}
+
+figure.snip1113.yellow h3,
+figure.snip1113.yellow h4 {
+  color: #215732;
+}
+
+figure.snip1113.green img {
+  border-color: #215732;
+}
+
+figure.snip1113.green h3,
+figure.snip1113.green h4 {
+  color: #215732;
+}
+
+figure.snip1113.orange img {
+  border-color: #215732;
+}
+
+figure.snip1113.orange h3,
+figure.snip1113.orange h4 {
+  color: #215732;
+}
+
+figure.snip1113.navy img {
+  border-color: #215732;
+}
+
+figure.snip1113.navy h3,
+figure.snip1113.navy h4 {
+  color: #215732;
+}
+
+
+/* Demo purposes only */
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0;
+  height: 100%;
+}
+@media (max-width: 1000px)
+{
+  
+}
