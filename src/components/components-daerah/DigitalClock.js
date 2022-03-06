@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./components-daerah/DigitalClock.css";
+import "./DigitalClock.css";
 import DateObject from "react-date-object";
 
 var date = new DateObject();
@@ -17,23 +17,25 @@ const DigitalClock = () => {
   }
 
   useEffect(() => {
+    function tick() {
+      const d = new Date();
+      const h = d.getHours();
+      const m = d.getMinutes();
+      const s = d.getSeconds();
+  
+      setTime(
+        formatTime(h) + h + ":" + formatTime(m) + m + ":" + formatTime(s) + s
+      );
+    }
+    
     const timerID = setInterval(() => tick(), 1000);
 
     return function cleanup() {
       clearInterval(timerID);
     };
+    
   }, []);
 
-  function tick() {
-    const d = new Date();
-    const h = d.getHours();
-    const m = d.getMinutes();
-    const s = d.getSeconds();
-
-    setTime(
-      formatTime(h) + h + ":" + formatTime(m) + m + ":" + formatTime(s) + s
-    );
-  }
 
   let showDate = new Date();
   let displaytodaydate = showDate.getDate()+'/'+(showDate.getMonth()+1)+'/'+showDate.getFullYear();

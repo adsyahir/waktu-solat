@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ResultToday.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from 'react-bootstrap';
 
 const ResultToday = (state) => {
   const [data, setData] = useState([]);
@@ -21,6 +22,7 @@ const ResultToday = (state) => {
   }, [state.state]);
 
   return (
+  <Container>
     <div className="container-1">
       <figure class="snip1113 red">
         <img
@@ -36,7 +38,6 @@ const ResultToday = (state) => {
               <h4>{elements.time}</h4>
             </div>
           ))}
-          <h4></h4>
         </figcaption>
       </figure>
       <figure class="snip1113 red">
@@ -53,7 +54,6 @@ const ResultToday = (state) => {
               <h4>{elements.time}</h4>
             </div>
           ))}
-          <h4></h4>
         </figcaption>
       </figure>
       <figure class="snip1113 red">
@@ -70,7 +70,6 @@ const ResultToday = (state) => {
               <h4>{elements.time}</h4>
             </div>
           ))}
-          <h4></h4>
         </figcaption>
       </figure>
       <figure class="snip1113 red">
@@ -87,7 +86,6 @@ const ResultToday = (state) => {
               <h4>{elements.time}</h4>
             </div>
           ))}
-          <h4></h4>
         </figcaption>
       </figure>
       <figure class="snip1113 red">
@@ -104,7 +102,6 @@ const ResultToday = (state) => {
               <h4>{elements.time}</h4>
             </div>
           ))}
-          <h4></h4>
         </figcaption>
       </figure>
       <figure class="snip1113 red">
@@ -121,7 +118,6 @@ const ResultToday = (state) => {
               <h4>{elements.time}</h4>
             </div>
           ))}
-          <h4></h4>
         </figcaption>
       </figure>
       <figure class="snip1113 red">
@@ -138,10 +134,11 @@ const ResultToday = (state) => {
               <h4>{elements.time}</h4>
             </div>
           ))}
-          <h4></h4>
         </figcaption>
       </figure>
+      
     </div>
+    </Container>
   );
 };
 
