@@ -5,7 +5,7 @@ import "./Dropdown.css";
 const DropdownSabah = () => {
   const [code , setCode] = useState();
   const [state, setState] = useState();
-  const [negeri, setNegeri] = useState({
+  const negeri = ({
     labels: [
       { label: "Balong", value: "sbh-0", id: 0 },
       { label: "Bukit Garam", value: "sbh-1", id: 1 },

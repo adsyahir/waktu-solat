@@ -6,7 +6,7 @@ import "./Dropdown.css";
 const Dropdown_kedah = () => {
   const [code, setCode] = useState();
   const [state, setState] = useState();
-  const [negeri, setNegeri] = useState({
+  const negeri = ({
     activeObject: null,
     labels: [
       { label: "Baling", value: "kdh-0", id: 0 },

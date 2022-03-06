@@ -7,7 +7,7 @@ import "./Dropdown.css";
 const DropdownJohor = () => {
   const [code, setCode] = useState();
   const [state, setState] = useState();
-  const [negeri, setNegeri] = useState({
+  const negeri =({
     labels: [
       { label: "Batu Pahat", value: "jhr-0" },
       { label: "Gemas", value: "jhr-1" },

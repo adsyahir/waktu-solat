@@ -7,7 +7,7 @@ import "./Dropdown.css";
 const DropdownWilayah = () => {
   const [code, setCode] = useState("wlp-0");
   const [state, setState] = useState("Kuala Lumpur");
-  const [negeri, setNegeri] = useState({
+  const negeri = ({
     labels: [
       { label: "Kuala Lumpur", value: "wlp-0" },
       { label: "Labuan", value: "wlp-1" },
