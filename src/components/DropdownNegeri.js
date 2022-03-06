@@ -17,13 +17,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Negeri.css";
 
 
-const Dropdown_label = () => {
-  const options = [
-    { label: 'Johor', value:'asdasd' },
-    { label: 'Kedah', value: '1' },
-    { label: 'Kelantan', value:'2'},
-  ];
-  const [label, setLabel] = useState({
+const DropdownNegeri = () => {
+
+  const label = ({
     selected: null,
     labels: [
       { label: "Johor", value:'Johor'},
@@ -76,4 +72,4 @@ const Dropdown_label = () => {
   );
 };
 
-export default Dropdown_label;
+export default DropdownNegeri;

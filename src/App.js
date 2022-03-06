@@ -1,7 +1,8 @@
 import './App.css';
 import DigitalClock from './components/DigitalClock';
-import Dropdown_negeri from './components/Dropdown_negeri';
+import Dropdown_negeri from './components/DropdownNegeri';
 import Title from './components/Title';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <Title/>
     <DigitalClock/>
       <Dropdown_negeri/>
+    <Footer/>
     </div>
   );
 
