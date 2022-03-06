@@ -5,15 +5,15 @@ import "./Dropdown.css";
 const DropdownSembilan = () => {
   const [code, setCode] = useState();
   const [state, setState] = useState();
-  const [negeri, setNegeri] = useState({
+  const negeri = ({
     labels: [
-      { location: "Jelebu", value: "ngs-0", id: 0 },
-      { location: "Jempol", value: "ngs-1", id: 1 },
-      { location: "Kuala Pilah", value: "ngs-2", id: 2 },
-      { location: "Port Dickson", value: "ngs-3", id: 3 },
-      { location: "Rembau", value: "ngs-4", id: 4 },
-      { location: "Seremban", value: "ngs-5", id: 5 },
-      { location: "Tampin", value: "ngs-6", id: 6 },
+      { label: "Jelebu", value: "ngs-0" },
+      { label: "Jempol", value: "ngs-1" },
+      { label: "Kuala Pilah", value: "ngs-2"},
+      { label: "Port Dickson", value: "ngs-3"},
+      { label: "Rembau", value: "ngs-4"},
+      { label: "Seremban", value: "ngs-5"},
+      { label: "Tampin", value: "ngs-6" },
     ],
   });
 

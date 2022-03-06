@@ -5,16 +5,16 @@ import "./Dropdown.css";
 const DropdownSarawak = () => {
   const [code, setCode] = useState();
   const [state, setState] = useState();
-  const [negeri, setNegeri] = useState({
-    label: [
+  const negeri = ({
+    labels: [
       { label: "Bau", value: "swk-0", id: 0 },
       { label: "Bekenu", value: "swk-1", id: 1 },
       { label: "Belaga", value: "swk-2", id: 2 },
       { label: "Belawai", value: "swk-3", id: 3 },
-      { label: "Belingan", value: "swk-4", id: 4 },
+      { label: "Balingian", value: "swk-4", id: 4 },
       { label: "Betong", value: "swk-5", id: 5 },
       { label: "Bintulu", value: "swk-6", id: 6 },
-      { label: "Bitangor", value: "swk-7", id: 7 },
+      { label: "Bintangor", value: "swk-7", id: 7 },
       { label: "Dalat", value: "swk-8", id: 8 },
       { label: "Daro", value: "swk-9", id: 9 },
       { label: "Debak", value: "swk-10", id: 10 },

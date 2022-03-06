@@ -3,11 +3,11 @@ import Tab from "react-bootstrap/Tab";
 import ResultToday from "./ResultToday";
 import Result from "./Result";
 import "./Taber.css";
-import React, { useState } from "react";
 
 const Taber = ({code,state}) => {
   
-  console.log(code+ state)
+  console.log(code + state)
+  let stat = state;
   if(code && state != null)
   {
     return (
@@ -16,7 +16,7 @@ const Taber = ({code,state}) => {
           <ResultToday state={state} />
         </Tab>
         <Tab eventKey="Month" title="Month" >
-          <Result code={code}/>
+          <Result code={code} stat={stat}/>
         </Tab>
       </Tabs> );
       }

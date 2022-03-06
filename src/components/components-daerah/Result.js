@@ -15,23 +15,23 @@ var dat = new DateObject();
 dat._format = "DD/MM/YYYY";
 
 
-export const Result = (code) => {
+export const Result = ({code,stat}) => {
   const [output, setOutput] = useState([]);
   const [time, setTime] = useState([]);
-  const [data, setData] = useState([]);
-  const [hari, setHari] = useState([]);
+  const data=([]);
+  const hari= ([]);
   const [search, setSearch] = useState([]);
-  const [kari, setKari] = useState([]);
-  const [d, setD] = useState([]);
+  const kari = ([]);
+  const d = ([]);
   
 
   useEffect(() => {
-    console.log(code.code);
+    console.log(code);
     var requestOptions = {
       method: "GET",
       redirect: "follow",
     };
-    fetch("https://mpt.i906.my/api/prayer/" + code.code, requestOptions)
+    fetch("https://mpt.i906.my/api/prayer/" + code, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         console.log(result.data);
@@ -39,8 +39,7 @@ export const Result = (code) => {
         setTime(result.data.times);
       })
       .catch((error) => console.log("error", error));
-      insertArray();
-  }, [code.code]);
+  }, [code]);
 
   function outputList() {
     data.length = 0;
@@ -109,13 +108,13 @@ export const Result = (code) => {
     setSearch(null)
    }    
   }
+  console.log(output);
 
-  let run = [{}];
 
   return (
     <Container>
     <div class="content">
-  <h4 class="text_shadows">{output.place}</h4>
+  <h4 class="text_shadows">{stat}</h4>
 </div>
       <div className="flex-2">
       <Select
@@ -152,18 +151,23 @@ export const Result = (code) => {
               <tr key={index}>
                 <td data-label="Day">{d}</td>
                 <td data-label="Date">{item[0]}</td>
-                <td data-label="Subuh">{item[1]}</td>
-                <td data-label="Syuruk">{item[2]}</td>
-                <td data-label="Zuhur">{item[3]}</td>
-                <td data-label="Asar">{item[4]}</td>
+                <td data-label="Fajr">{item[1]}</td>
+                <td data-label="Sunrise">{item[2]}</td>
+                <td data-label="Dhuhr">{item[3]}</td>
+                <td data-label="Asr">{item[4]}</td>
                 <td data-label="Maghrib">{item[5]}</td>
-                <td data-label="Isyak">{item[6]}</td>
+                <td data-label="Isha">{item[6]}</td>
               </tr>
             );
+            }
+            else
+            {
+              return(<div></div>)
             }
           })}
         </tbody>
       </table>
+      
     </Container>
   );
 };

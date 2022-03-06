@@ -43,7 +43,7 @@ const DigitalClock = () => {
   let d = date.format("dddd DD MMMM YYYY");
   return (
     <div id="clock">
-      <p class="date">{d}</p>
+      <label class="date">{d}</label>
       <p class="time">{time}</p>
     </div>
   );

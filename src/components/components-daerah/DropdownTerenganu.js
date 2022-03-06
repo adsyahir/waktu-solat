@@ -6,14 +6,14 @@ const DropdownTerenganu = () =>
 {
     const[code,setCode] = useState();
     const[state,setState] = useState();
-    const [negeri, setNegeri] = useState({
+    const negeri = ({
         labels: [
-          { location: "Besut", value: "trg-0", id: 0},
-          { location: "Hulu Terrenganu", value: "trg-1", id: 1 },
-          { location: "Kemaman Dungun", value: "trg-2", id: 2},
-          { location: "Kuala Terengganu", value: "trg-3", id: 3},
-          { location: "Marang", value: "trg-4", id: 4 },
-          { location: "Setiu", value: "trg-5" , id: 5},
+          { label: "Besut", value: "trg-0", id: 0},
+          { label: "Hulu Terrenganu", value: "trg-1", id: 1 },
+          { label: "Kemaman Dungun", value: "trg-2", id: 2},
+          { label: "Kuala Terengganu", value: "trg-3", id: 3},
+          { label: "Marang", value: "trg-4", id: 4 },
+          { label: "Setiu", value: "trg-5" , id: 5},
         ],
       });
       function handleChange(e) {

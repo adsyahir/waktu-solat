@@ -25,7 +25,7 @@ const DropdownNegeri = () => {
       { label: "Johor", value:'Johor'},
       { label: "Kedah", value:"Kedah"},
       { label: "Kelantan" , value:"Kelantan"},
-      { label: "Melaka", value:"Melaka"},
+      { label: "Melaka", value:"Melaka", isDisabled:true},
       { label: "Negeri Sembilan" , value:"Negeri Sembilan"},
       { label: "Pahang" , value:"Pahang" },
       { label: "Perak" , value:"Perak"},
@@ -59,7 +59,7 @@ const DropdownNegeri = () => {
       {show === "Kedah" && <DropdownKedah />}
       {show === "Kelantan" && <DropdownKelantan />}
       {show === "Melaka" && <DropdownMelaka />}
-      {show === "label Sembilan" && <DropdownSembilan />}
+      {show === "Negeri Sembilan" && <DropdownSembilan />}
       {show === "Pahang" && <DropdownPahang />}
       {show === "Perak" && <DropdownPerak />}
       {show === "Pulau Pinang" && <DropdownPinang />}

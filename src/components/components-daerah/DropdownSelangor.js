@@ -5,7 +5,7 @@ import "./Dropdown.css";
 const DropdownSelangor = () => {
   const [code, setCode] = useState();
   const [state, setState] = useState();
-  const [negeri, setNegeri] = useState({
+  const negeri = ({
     labels: [
       { label: "Gombak", value: "sgr-0", id: 0 },
       { label: "Hulu Langat", value: "sgr-1", id: 1 },
@@ -14,10 +14,10 @@ const DropdownSelangor = () => {
       { label: "Kuala Langat", value: "sgr-4", id: 4 },
       { label: "Kuala Selangor", value: "sgr-5", id: 5 },
       { label: "Petaling", value: "sgr-6", id: 6 },
-      { label: "Rawang", value: "sgr-7", id: 7 },
+      { label: "Rawang", value: "sgr-7", id: 7, isDisabled: true },
       { label: "Sabak Bernam", value: "sgr-8", id: 8 },
       { label: "Sepang", value: "sgr-9", id: 9 },
-      { label: "Shah Alam", value: "sgr-10", id: 10 },
+      { label: "S. Alam", value: "sgr-10", id: 10 },
     ],
   });
 
